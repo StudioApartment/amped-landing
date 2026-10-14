@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaqAccordion } from "./faq-accordion";
 import { TeamSocialLinks } from "./team-brand-social-icons";
 import { TEAM } from "./team";
+import { WhyAmped } from "./why-amped";
 
 const teamPhotoClassName =
   "object-cover origin-center transition-transform duration-[1800ms] ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform group-hover:scale-[1.14] group-focus-within:scale-[1.14]";
@@ -23,15 +23,9 @@ export function ContentSection() {
             className="animate-amp-reveal w-full max-w-[40rem] font-[family-name:var(--font-ranade)] text-[1.5rem] font-normal leading-[1.22] tracking-[-0.03em] text-white sm:max-w-[44rem]"
             style={{ ["--amp-reveal-delay" as string]: "280ms" }}
           >
-            We are commercial operators, investors, &amp; strategists.
+            We are commercial operators, investors, and strategists building
+            the political and cultural power of the clean energy industry.
           </h2>
-          <p
-            className="animate-amp-reveal max-w-xl font-[family-name:var(--font-libre)] text-lg font-normal leading-relaxed tracking-[-0.02em] text-white"
-            style={{ ["--amp-reveal-delay" as string]: "360ms" }}
-          >
-            Focused on strengthening the political, cultural, and market infrastructure
-            required for the energy transition to scale.
-          </p>
 
           {(featuredMember || secondaryTeam.length) ? (
             <div className="mt-10 flex w-full flex-col gap-3 sm:mt-12 lg:mt-14">
@@ -138,7 +132,7 @@ export function ContentSection() {
             </div>
           ) : null}
 
-          <FaqAccordion className="mt-28 sm:mt-32 lg:mt-36" />
+          <WhyAmped className="mt-28 sm:mt-32 lg:mt-36" />
 
           <div
             className="animate-amp-reveal mt-14 lg:mt-16"
