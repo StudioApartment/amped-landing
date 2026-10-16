@@ -21,30 +21,20 @@ export function HeroSection() {
           </div>
         </header>
 
-        <div className="mt-auto flex w-full flex-col items-stretch gap-5 pl-0 pt-10 sm:pl-5 lg:flex-row lg:items-end lg:justify-between lg:gap-10 xl:gap-16">
-          <div className="flex min-w-0 max-w-[36rem] flex-col gap-2 text-left sm:gap-2.5 lg:max-w-[min(38rem,52%)]">
-            <h1
-              className="animate-amp-reveal w-full max-w-[22ch] font-[family-name:var(--font-libre)] text-[1.65rem] font-medium leading-[1.12] tracking-[-0.04em] text-white sm:max-w-none sm:text-[clamp(1.75rem,3.6vw,2.65rem)]"
-              style={{ ["--amp-reveal-delay" as string]: "120ms" }}
-            >
-              Organizing the clean energy revolution
-            </h1>
-            <p
-              className="animate-amp-reveal max-w-md font-[family-name:var(--font-ranade)] text-sm font-medium leading-snug tracking-[-0.04em] text-white sm:text-base"
-              style={{ ["--amp-reveal-delay" as string]: "200ms" }}
-            >
-              <span className="bg-black px-1 py-0.5 [-webkit-box-decoration-break:clone] [box-decoration-break:clone]">
-                We build the systems needed to power the clean energy economy.
-              </span>
-            </p>
-          </div>
-
-          <p
-            className="animate-amp-reveal max-w-[20rem] text-left font-[family-name:var(--font-libre)] text-base font-medium leading-snug tracking-[-0.03em] text-white sm:max-w-[22rem] sm:text-lg lg:ml-auto lg:max-w-[24rem] lg:pb-0.5 lg:text-right"
-            style={{ ["--amp-reveal-delay" as string]: "260ms" }}
+        <div className="mt-auto flex w-full flex-col items-stretch gap-4 pl-0 pt-10 sm:pl-5 lg:flex-row lg:items-end lg:justify-between lg:gap-10 xl:gap-16">
+          <h1
+            className="animate-amp-reveal min-w-0 max-w-[18ch] font-[family-name:var(--font-libre)] text-[2.5rem] font-medium leading-[0.98] tracking-[-0.04em] text-white sm:max-w-[20ch] sm:text-[clamp(2.75rem,5.8vw,4.25rem)] lg:max-w-[min(20ch,52%)]"
+            style={{ ["--amp-reveal-delay" as string]: "120ms" }}
           >
-            We are commercial operators, investors, and strategists building the
-            political and cultural power of the clean energy industry.
+            Organizing the clean energy revolution
+          </h1>
+          <p
+            className="animate-amp-reveal max-w-[20rem] font-[family-name:var(--font-ranade)] text-lg font-normal leading-snug tracking-[-0.03em] text-white sm:max-w-[24rem] sm:text-xl sm:leading-[1.3] lg:ml-auto lg:max-w-[26rem] lg:pb-1 lg:text-right"
+            style={{ ["--amp-reveal-delay" as string]: "200ms" }}
+          >
+            <span className="bg-black px-1 py-0.5 [-webkit-box-decoration-break:clone] [box-decoration-break:clone]">
+              We build the systems needed to power the clean energy economy.
+            </span>
           </p>
         </div>
       </div>

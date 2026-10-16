@@ -1,5 +1,5 @@
 const bodyClass =
-  "font-[family-name:var(--font-ranade)] text-base font-normal leading-snug tracking-[-0.03em] text-white sm:text-lg sm:leading-[1.35]";
+  "font-[family-name:var(--font-libre)] text-lg font-normal leading-[1.65] tracking-[-0.01em] text-white sm:text-xl sm:leading-[1.7]";
 
 const PARAGRAPHS = [
   "Clean energy has largely won the commercial argument. It’s increasingly the cheapest and fastest energy to build. And it’s a linchpin of our national security and economic interests.",
@@ -16,23 +16,23 @@ const PARAGRAPHS = [
 
 export function WhyAmped({ className = "" }: { className?: string }) {
   return (
-    <div className={`w-full max-w-[58.75rem] ${className}`}>
-      <h2 className="mb-4 text-left font-[family-name:var(--font-libre)] text-[0.6875rem] font-medium uppercase leading-tight tracking-[0.22em] text-white/85 sm:text-xs">
-        Why AMPED Exists
-      </h2>
-      <div className="max-w-[40rem] space-y-4 sm:max-w-[46rem] sm:space-y-5">
-        {PARAGRAPHS.map((p, i) => (
-          <p
-            key={p}
-            className={
-              i === 0
-                ? `${bodyClass} max-w-[36rem] text-[0.95rem] leading-snug sm:max-w-[42rem] sm:text-base`
-                : bodyClass
-            }
-          >
-            {p}
-          </p>
-        ))}
+    <div className={`w-full ${className}`}>
+      <div className="mx-auto flex w-full max-w-[40rem] flex-col gap-8 sm:max-w-[44rem] sm:gap-10">
+        {PARAGRAPHS.map((p, i) => {
+          const alignRight = i % 2 === 1;
+          return (
+            <p
+              key={p}
+              className={[
+                bodyClass,
+                "max-w-[28rem] sm:max-w-[32rem]",
+                alignRight ? "ml-auto text-right" : "mr-auto text-left",
+              ].join(" ")}
+            >
+              {p}
+            </p>
+          );
+        })}
       </div>
     </div>
   );

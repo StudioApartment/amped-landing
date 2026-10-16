@@ -39,12 +39,24 @@ export function RevealObserver() {
         }
       },
       {
-        rootMargin: "0px 0px 20% 0px",
-        threshold: 0.01,
+        rootMargin: "0px 0px 35% 0px",
+        threshold: 0,
       },
     );
 
-    targets.forEach((el) => observer.observe(el));
+    // Mark anything already in (or near) view immediately so HMR / late paint
+    // can't leave opacity-0 elements stranded.
+    const revealIfVisible = (el: HTMLElement) => {
+      const rect = el.getBoundingClientRect();
+      const vh = window.innerHeight || 0;
+      if (rect.top < vh * 1.35 && rect.bottom > -vh * 0.1) {
+        el.classList.add("is-in-view");
+        return;
+      }
+      observer.observe(el);
+    };
+
+    targets.forEach((el) => revealIfVisible(el));
     return () => observer.disconnect();
   }, []);
 
