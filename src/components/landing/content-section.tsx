@@ -1,17 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
-import { TeamSocialLinks } from "./team-brand-social-icons";
-import { TEAM } from "./team";
 import { WhyAmped } from "./why-amped";
 
-const teamPhotoClassName =
-  "object-cover origin-center transition-transform duration-[1800ms] ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform group-hover:scale-[1.14] group-focus-within:scale-[1.14]";
-
 export function ContentSection() {
-  const featuredMember = TEAM[0];
-  const featuredLinkedin = featuredMember?.socials.find((s) => s.network === "linkedin")?.href;
-  const featuredDelay = 440;
-  const contactDelay = featuredMember ? 560 : 440;
+  const contactDelay = 440;
   const footerDelay = contactDelay + 80;
 
   return (
@@ -26,52 +17,7 @@ export function ContentSection() {
             the political and cultural power of the clean energy industry.
           </h2>
 
-          {featuredMember ? (
-            <div className="mt-10 flex w-full flex-col gap-3 sm:mt-12 lg:mt-14">
-              <p
-                className="self-start text-left font-[family-name:var(--font-libre)] text-[0.6875rem] font-medium uppercase leading-tight tracking-[0.22em] text-white/85 sm:text-xs lg:max-w-[58.75rem]"
-              >
-                TEAM
-              </p>
-              <div
-                className="animate-amp-reveal w-full"
-                style={{ ["--amp-reveal-delay" as string]: `${featuredDelay}ms` }}
-              >
-                <div className="group relative aspect-square w-full max-w-[26rem] overflow-hidden bg-neutral-900 md:max-w-[28rem] lg:max-w-[30rem]">
-                  <Image
-                    src={featuredMember.imageSrc}
-                    alt=""
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 46vw, 42vw"
-                    className={teamPhotoClassName}
-                  />
-                  <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/72 via-black/28 to-transparent" />
-                  <div className="absolute bottom-[20px] left-[20px] z-10 max-w-[calc(100%-40px)] text-white">
-                    <p className="font-[family-name:var(--font-ranade)] text-[1.35rem] font-normal leading-[1.22] tracking-[-0.03em] text-white">
-                      {featuredMember.name}
-                    </p>
-                    {featuredMember.title ? (
-                      <p className="mt-1.5 font-[family-name:var(--font-libre)] text-[0.75rem] font-normal uppercase leading-tight tracking-[0.18em] text-white/80 sm:text-[0.8125rem]">
-                        {featuredMember.title}
-                      </p>
-                    ) : null}
-                    <div className="mt-1.5">
-                      <TeamSocialLinks
-                        name={featuredMember.name}
-                        socials={
-                          featuredLinkedin
-                            ? [{ network: "linkedin" as const, href: featuredLinkedin }]
-                            : featuredMember.socials
-                        }
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ) : null}
-
-          <WhyAmped className="mt-28 sm:mt-32 lg:mt-36" />
+          <WhyAmped className="mt-16 sm:mt-20 lg:mt-24" />
 
           <div
             className="animate-amp-reveal mt-14 lg:mt-16"
