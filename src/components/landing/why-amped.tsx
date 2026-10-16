@@ -1,5 +1,5 @@
 const bodyClass =
-  "font-[family-name:var(--font-ranade)] text-[1.5rem] font-normal leading-[1.22] tracking-[-0.03em] text-white";
+  "font-[family-name:var(--font-ranade)] text-base font-normal leading-snug tracking-[-0.03em] text-white sm:text-lg sm:leading-[1.35]";
 
 const PARAGRAPHS = [
   "Clean energy has largely won the commercial argument. It’s increasingly the cheapest and fastest energy to build. And it’s a linchpin of our national security and economic interests.",
@@ -20,9 +20,16 @@ export function WhyAmped({ className = "" }: { className?: string }) {
       <h2 className="mb-4 text-left font-[family-name:var(--font-libre)] text-[0.6875rem] font-medium uppercase leading-tight tracking-[0.22em] text-white/85 sm:text-xs">
         Why AMPED Exists
       </h2>
-      <div className="max-w-[44rem] space-y-6">
-        {PARAGRAPHS.map((p) => (
-          <p key={p} className={bodyClass}>
+      <div className="max-w-[40rem] space-y-4 sm:max-w-[46rem] sm:space-y-5">
+        {PARAGRAPHS.map((p, i) => (
+          <p
+            key={p}
+            className={
+              i === 0
+                ? `${bodyClass} max-w-[36rem] text-[0.95rem] leading-snug sm:max-w-[42rem] sm:text-base`
+                : bodyClass
+            }
+          >
             {p}
           </p>
         ))}

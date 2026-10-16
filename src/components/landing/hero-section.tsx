@@ -5,7 +5,7 @@ export function HeroSection() {
     <section className="relative isolate min-h-svh overflow-hidden bg-[#070707] md:min-h-[min(100svh,56rem)]">
       <HeroVideo />
 
-      <div className="relative z-10 mx-auto flex min-h-svh max-w-[90rem] flex-col px-4 pb-16 pt-12 sm:px-6 sm:pt-6 md:min-h-[min(100svh,56rem)] lg:px-10">
+      <div className="relative z-10 mx-auto flex min-h-svh max-w-[90rem] flex-col px-4 pb-10 pt-12 sm:px-6 sm:pb-12 sm:pt-6 md:min-h-[min(100svh,56rem)] lg:px-10 lg:pb-14">
         <header
           className="animate-amp-reveal relative -mt-[calc(0.25rem+5px)] w-fit origin-top-left pl-0 sm:pl-5 sm:mt-[-5px]"
           style={{ ["--amp-reveal-delay" as string]: "40ms" }}
@@ -21,20 +21,30 @@ export function HeroSection() {
           </div>
         </header>
 
-        <div className="mt-6 flex w-full max-w-[48rem] flex-col gap-2 pb-8 pl-0 text-left sm:mt-4 sm:gap-3 sm:pl-5">
-          <h1
-            className="animate-amp-reveal w-full max-w-none font-[family-name:var(--font-libre)] text-[calc(1.875rem*1.35)] font-medium leading-[1.08] tracking-[-0.04em] text-white sm:text-[clamp(calc(1.75rem*1.35),6.21vw,calc(3.25rem*1.35))]"
-            style={{ ["--amp-reveal-delay" as string]: "120ms" }}
-          >
-            Organizing the clean energy revolution
-          </h1>
+        <div className="mt-auto flex w-full flex-col items-stretch gap-5 pl-0 pt-10 sm:pl-5 lg:flex-row lg:items-end lg:justify-between lg:gap-10 xl:gap-16">
+          <div className="flex min-w-0 max-w-[36rem] flex-col gap-2 text-left sm:gap-2.5 lg:max-w-[min(38rem,52%)]">
+            <h1
+              className="animate-amp-reveal w-full max-w-[22ch] font-[family-name:var(--font-libre)] text-[1.65rem] font-medium leading-[1.12] tracking-[-0.04em] text-white sm:max-w-none sm:text-[clamp(1.75rem,3.6vw,2.65rem)]"
+              style={{ ["--amp-reveal-delay" as string]: "120ms" }}
+            >
+              Organizing the clean energy revolution
+            </h1>
+            <p
+              className="animate-amp-reveal max-w-md font-[family-name:var(--font-ranade)] text-sm font-medium leading-snug tracking-[-0.04em] text-white sm:text-base"
+              style={{ ["--amp-reveal-delay" as string]: "200ms" }}
+            >
+              <span className="bg-black px-1 py-0.5 [-webkit-box-decoration-break:clone] [box-decoration-break:clone]">
+                We build the systems needed to power the clean energy economy.
+              </span>
+            </p>
+          </div>
+
           <p
-            className="animate-amp-reveal max-w-xl font-[family-name:var(--font-ranade)] text-base font-medium leading-relaxed tracking-[-0.05em] text-white sm:text-lg"
-            style={{ ["--amp-reveal-delay" as string]: "200ms" }}
+            className="animate-amp-reveal max-w-[20rem] text-left font-[family-name:var(--font-libre)] text-base font-medium leading-snug tracking-[-0.03em] text-white sm:max-w-[22rem] sm:text-lg lg:ml-auto lg:max-w-[24rem] lg:pb-0.5 lg:text-right"
+            style={{ ["--amp-reveal-delay" as string]: "260ms" }}
           >
-            <span className="bg-black px-1 py-0.5 [-webkit-box-decoration-break:clone] [box-decoration-break:clone]">
-              We build the systems needed to power the clean energy economy.
-            </span>
+            We are commercial operators, investors, and strategists building the
+            political and cultural power of the clean energy industry.
           </p>
         </div>
       </div>

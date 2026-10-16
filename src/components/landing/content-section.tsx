@@ -9,15 +9,7 @@ export function ContentSection() {
     <section className="bg-[#070707] px-4 pb-[30px] pt-12 sm:px-6 lg:px-10">
       <div className="mx-auto max-w-[90rem]">
         <div className="mx-auto flex w-full max-w-[56rem] flex-col gap-1.5 lg:mx-0 lg:max-w-none">
-          <h2
-            className="animate-amp-reveal w-full max-w-[40rem] font-[family-name:var(--font-ranade)] text-[1.5rem] font-normal leading-[1.22] tracking-[-0.03em] text-white sm:max-w-[44rem]"
-            style={{ ["--amp-reveal-delay" as string]: "280ms" }}
-          >
-            We are commercial operators, investors, and strategists building
-            the political and cultural power of the clean energy industry.
-          </h2>
-
-          <WhyAmped className="mt-16 sm:mt-20 lg:mt-24" />
+          <WhyAmped className="mt-4 sm:mt-6 lg:mt-8" />
 
           <div
             className="animate-amp-reveal mt-14 lg:mt-16"
