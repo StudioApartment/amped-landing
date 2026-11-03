@@ -48,15 +48,19 @@ const LINK_PREVIEW_TITLE = "AMPED - New American Energy";
 
 /** Short line shown under the title in Open Graph / Twitter / most link previews. */
 const LINK_PREVIEW_DESCRIPTION =
-  "Building the systems enabling clean energy to win.";
+  "We build the systems needed to power the clean energy economy.";
 
-/** Canonical link-preview art — replace `public/social/link-preview.png` when the design updates. */
-const SOCIAL_SHARE_PATH = "/social/link-preview.png";
-const SOCIAL_SHARE_WIDTH = 1024;
-const SOCIAL_SHARE_HEIGHT = 535;
+/**
+ * Dynamic OG art from `opengraph-image.tsx` — mirrors the live hero (still + brand lockup +
+ * headline). Prefer this over the static `public/social/link-preview.png` so text shares match
+ * the site.
+ */
+const SOCIAL_SHARE_PATH = "/opengraph-image";
+const SOCIAL_SHARE_WIDTH = 1200;
+const SOCIAL_SHARE_HEIGHT = 630;
 
-/** Bump when replacing the PNG so iMessage / MMS caches see a new path even between deploys. */
-const SHARE_IMAGE_REVISION = "3";
+/** Bump when the OG composition changes so iMessage / MMS caches see a new URL. */
+const SHARE_IMAGE_REVISION = "4";
 
 /**
  * Chat apps cache preview URLs aggressively. Use deploy id + revision so each ship
